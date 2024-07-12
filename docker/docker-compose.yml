@@ -1,0 +1,11 @@
+services:
+  mysql:
+    container_name: 'guide-mysql'
+    image: 'mysql:latest'
+    environment:
+      - 'MYSQL_DATABASE=agendamentodb'
+      - 'MYSQL_PASSWORD=4321'
+      - 'MYSQL_ROOT_PASSWORD=122'
+      - 'MYSQL_USER=pedream'
+    ports:
+      - '3307:3307'
