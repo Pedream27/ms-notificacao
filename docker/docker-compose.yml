@@ -6,6 +6,6 @@ services:
       - 'MYSQL_DATABASE=agendamentodb'
       - 'MYSQL_PASSWORD=4321'
       - 'MYSQL_ROOT_PASSWORD=122'
-      - 'MYSQL_USER=pedream'
+      - 'MYSQL_USER=root'
     ports:
       - '3307:3307'
