@@ -7,26 +7,18 @@ import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
 
-import dev.phsaraiva.com.br.ms_agendamento.entity.Sms;
+import dev.phsaraiva.com.br.ms_agendamento.dto.Sms;
 
 @Service
-public class SmsService {
+public class SmsService extends TwiloConfig {
 
-    @Value("${twilio.accountSid}")
-    private String accountSid;
-
-    @Value("${twilio.authToken}")
-    private String authToken;
-
-    @Value("${twilio.phoneNumber}")
-    private String phoneNumber;
 
     public void sendSMS(Sms sms) {
-        Twilio.init(accountSid, authToken);
+        Twilio.init(this.getAccountSid(), this.getAuthToken());
 
         Message.creator(
                 new PhoneNumber(sms.to()),
-                new PhoneNumber(phoneNumber),
+                new PhoneNumber(this.getPhoneNumber()),
                 sms.message()
         ).create();
     }

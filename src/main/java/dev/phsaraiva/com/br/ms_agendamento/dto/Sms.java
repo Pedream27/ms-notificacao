@@ -1,4 +1,4 @@
-package dev.phsaraiva.com.br.ms_agendamento.entity;
+package dev.phsaraiva.com.br.ms_agendamento.dto;
 
 public record Sms(
     String to,

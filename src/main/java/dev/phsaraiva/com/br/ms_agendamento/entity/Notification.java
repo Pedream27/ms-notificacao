@@ -8,7 +8,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -37,8 +36,6 @@ public class Notification {
     public Notification() {
     }
 
-    
-
     public Notification(LocalDateTime dateTime2, String destination2, String message2, Channel channel2,
             Status status2, User user) {
         this.dateTime = dateTime2;
@@ -48,8 +45,6 @@ public class Notification {
         this.status = status2;
         this.user = user;
     }
-
-
 
     public long getNotificationID() {
         return notificationID;
@@ -99,13 +94,9 @@ public class Notification {
         this.status = status;
     }
 
-
-
     public User getUser() {
         return user;
     }
-
-
 
     public void setUser(User user) {
         this.user = user;

@@ -5,7 +5,7 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
-import dev.phsaraiva.com.br.ms_agendamento.entity.Email;
+import dev.phsaraiva.com.br.ms_agendamento.dto.Email;
 @Service
 public class EmailService {
     @Autowired
